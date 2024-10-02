@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+ 
+  color-scheme: light dark;
+  color: rgba(22, 22, 65, 0.87);
+  background-color: rgba(4, 152, 155, 0.61);
+ 
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ 
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+ 
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+ 
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  text-align: center;
+}
+ 
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+ 
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+/* ในไฟล์ App.css หรือ index.css */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* ยังคงให้มี 5 คอลัมน์ */
+  gap: 0.5rem; /* ปรับระยะห่างระหว่างสินค้า */
+  padding: 2rem;
+  justify-items: center; /* จัดให้อยู่ตรงกลาง */
+  max-width: 100%; /* ใช้พื้นที่ทั้งหมดของ container */
+}
+ 
+.product-card {
+  width: 250px; /* ขนาดการ์ด */
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background-color: #eceaea; /* พื้นหลังของการ์ด */
+  transition: transform 0.3s ease; /* เพิ่ม transition ให้การ์ด */
+}
+
+.product-card img {
+  width: 250px; /* ขนาดเริ่มต้นของรูปภาพ */
+  height: 250px;
+  transition: transform 0.3s ease; /* เพิ่มการเปลี่ยนแปลงเวลา hover */
+}
+
+.product-card:hover img {
+  transform: scale(1.3); /* ขยายรูปภาพเมื่อ hover */
+}
+
+.product-card h2 {
+  font-size: 1.2rem; /* ปรับขนาดตัวอักษรชื่อสินค้า */
+}
+
+.product-card p {
+  font-size: 1rem; /* ปรับขนาดตัวอักษรราคาสินค้า */
+}
+
+.product-card button {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  align-items: center;
+}
+
+ 
+ 
